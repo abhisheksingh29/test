@@ -7,13 +7,13 @@ public class testCalc {
             return stringtoInt(s);
         }
         else {
-            String delimiter = ",";
+            String delimit = ",";
             if(s.matches("//(.*)\n(.*)")){
-                delimiter = Character.toString(s.charAt(2));
+                delimit = Character.toString(s.charAt(2));
                 s = s.substring(4);
             }
 
-            String numbers[] = splitNumbers(s, delimiter + "|\n");
+            String numbers[] = splitNumbers(s, delimit + "|\n");
             return getSum(numbers);
         }
     }
